@@ -2306,9 +2306,9 @@ $(document).on("keyup", function (e) {
   
 　　【你吐出一口气，望向桌上琳琅满目的酒水单。】
 
-　　-我想要……&lt;&lt;textbox &quot;$wine&quot; &quot;玛格丽特&quot;&gt;&gt;&lt;font color=&quot;grey&quot;&gt;//在方框里输入酒水的名字//&lt;/font&gt;&lt;&lt;/if&gt;&gt;
+　　-我想要……&lt;&lt;textbox &quot;$wine&quot; &quot;玛格丽特&quot;&gt;&gt;&lt;font color=&quot;grey&quot;&gt;//在方框里输入酒水的名字//&lt;/font&gt;
 
-　　[[继续|4.11]]&lt;&lt;set $drsi to 0&gt;&gt;
+　　[[继续|4.11]]&lt;&lt;/if&gt;&gt;&lt;&lt;set $drsi to 0&gt;&gt;
 </tw-passagedata><tw-passagedata pid="117" name="洗手间" tags="" position="500,2750" size="100,100">　　&lt;&lt;if $duic is true&gt;&gt;【你来到洗手间。头顶的灯光比酒吧里要亮一些，镜子整齐地排列着，洗手台的水龙头也可以打开。】
   
 　　【你看向你手里的塔罗牌。或许你可以借助这里做些什么。】
@@ -2318,6 +2318,8 @@ $(document).on("keyup", function (e) {
   　　[[镜子]]
 
   　　[[水龙头]]
+
+　　[[返回|4.1]]
     
 　　&lt;&lt;elseif $drsi gte 3&gt;&gt;【因为刚才喝下的酒的关系，你感到一股尿意袭来。在向刚酱确认过洗手间的位置以后，你冲向走廊尽头。】
 
@@ -2334,7 +2336,7 @@ $(document).on("keyup", function (e) {
 　　[[……刚酱？]]
 
 　　[[……Madam Rose？]]
-&lt;&lt;if $deri lt 3&gt;&gt;【你感受了一下自己的膀胱。你现在还不是很想去洗手间。等你多喝几杯再回来吧。】
+&lt;&lt;elseif $deri lt 3&gt;&gt;【你感受了一下自己的膀胱。你现在还不是很想去洗手间。等你多喝几杯再回来吧。】
 
 　　[[返回|4.1]]
 
@@ -2725,12 +2727,12 @@ $(document).on("keyup", function (e) {
 
 　　【那橘色的发丝化作火焰，熊熊燃烧起来。你手中的塔罗牌变得极其滚烫。】
 
-　　[[继续|灯光4.2]]
+　　[[继续|灯光4.2]]&lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="153" name="灯光4.2" tags="" position="625,3625" size="100,100">　　【你立刻松开塔罗牌。落到洗手台上以后，牌面恢复了一切正常。】
 
 　　【你重新检查这张塔罗牌，没有任何异常。】
 
-　　【看来你的压力有点太大了。】&lt;&lt;set $light to true&gt;&gt;&lt;&lt;/if&gt;&gt;
+　　【看来你的压力有点太大了。】&lt;&lt;set $light to true&gt;&gt;
 
   　　[[返回|洗手间]]</tw-passagedata><tw-passagedata pid="154" name="翻到背面-镜子" tags="" position="250,3750" size="100,100">　　【你将塔罗牌翻到背面，用镜子照着上面的数字。】
 
@@ -2788,7 +2790,7 @@ $(document).on("keyup", function (e) {
 
 　　【你不得不放弃这个想法。看来你应该从别的地方找到出去的方法。】
 
-　　&lt;&lt;set $jbdm to false&gt;&gt;&lt;&lt;if&gt;&gt;
+　　&lt;&lt;set $jbdm to false&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 　　[[返回|4.1]]</tw-passagedata><tw-passagedata pid="158" name="还不知道" tags="" position="625,3750" size="100,100">　　-没关系，您想到任何线索都可以重新来找我。
 
@@ -2928,7 +2930,9 @@ $(document).on("keyup", function (e) {
 
 　　【你们有一搭没一搭地聊着天。渐渐地，前面越来越亮了。】
 
-　　【你们走到了最后一扇门前面。】</tw-passagedata><tw-passagedata pid="168" name="不牵手4" tags="" position="375,4000" size="100,100">　　【你摇了摇头，没有去牵住他的手。他没说什么，把手收了回去。你还是抓着他的衣角，在长廊里面慢慢地跟着他走。】
+　　【你们走到了最后一扇门前面。】
+  
+　　[[继续|结局]]</tw-passagedata><tw-passagedata pid="168" name="不牵手4" tags="" position="375,4000" size="100,100">　　【你摇了摇头，没有去牵住他的手。他没说什么，把手收了回去。你还是抓着他的衣角，在长廊里面慢慢地跟着他走。】
 
 　　【世界太安静了。你几乎能听见自己心跳的声音。】
 
