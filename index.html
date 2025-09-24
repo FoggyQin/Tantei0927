@@ -2210,7 +2210,7 @@ $(document).on("keyup", function (e) {
 
 　　达成BADEND：延毕医学生
   
-　　[[返回重选|黑板2]]</tw-passagedata><tw-passagedata pid="112" name="第4章" tags="" position="125,2750" size="100,100">&lt;span class=&quot;blinky&quot;&gt;ROOM Ⅳ&lt;/span&gt;
+　　[[返回重选|黑板2]]&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="第4章" tags="" position="125,2750" size="100,100">&lt;span class=&quot;blinky&quot;&gt;ROOM Ⅳ&lt;/span&gt;&lt;&lt;set $drsi to 0&gt;&gt;
 
 　　【仿佛仅仅是一眨眼的时间，又仿佛度过了一个世纪。当你回过神来时，四周的景象发生了翻天覆地的变化。】
 
@@ -2288,7 +2288,13 @@ $(document).on("keyup", function (e) {
 　　[[关于密码……|问刚酱关于密码的事情]]
   
 　　[[返回|4.1]]
-　　&lt;&lt;else&gt;&gt;【你向酒吧内灯光更明亮的地方走去。你接近了吧台，随意坐下。KAI坐在你身侧。】
+　　&lt;&lt;elseif $drsi gte 1&gt;&gt;【你回到吧台。刚酱正在研制新品。看到你以后，朝你打了个招呼。】
+  
+　　-您需要点什么？
+
+　　-我想要……&lt;&lt;textbox &quot;$wine&quot; &quot;玛格丽特&quot;&gt;&gt;&lt;font color=&quot;grey&quot;&gt;//在方框里输入酒水的名字//&lt;/font&gt;
+
+　　[[继续|4.11]]&lt;&lt;else&gt;&gt;【你向酒吧内灯光更明亮的地方走去。你接近了吧台，随意坐下。KAI坐在你身侧。】
 
 　　【调酒师刚酱将金酒放回到身后的酒柜上，然后朝这边看了过来。】
 
@@ -2308,7 +2314,7 @@ $(document).on("keyup", function (e) {
 
 　　-我想要……&lt;&lt;textbox &quot;$wine&quot; &quot;玛格丽特&quot;&gt;&gt;&lt;font color=&quot;grey&quot;&gt;//在方框里输入酒水的名字//&lt;/font&gt;
 
-　　[[继续|4.11]]&lt;&lt;/if&gt;&gt;&lt;&lt;set $drsi to 0&gt;&gt;
+　　[[继续|4.11]]&lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="117" name="洗手间" tags="" position="500,2750" size="100,100">　　&lt;&lt;if $duic is true&gt;&gt;【你来到洗手间。头顶的灯光比酒吧里要亮一些，镜子整齐地排列着，洗手台的水龙头也可以打开。】
   
 　　【你看向你手里的塔罗牌。或许你可以借助这里做些什么。】
@@ -2353,7 +2359,7 @@ $(document).on("keyup", function (e) {
 
 　　[[问KAI][$duic to true]]
 
-　　[[谁也不问|4.1]]&lt;&lt;else&gt;&gt;【你从怀里掏出Rose送给你的那张塔罗牌。牌面是“倒吊人”。】
+　　[[谁也不问|4.1][$duic to true]]&lt;&lt;else&gt;&gt;【你从怀里掏出Rose送给你的那张塔罗牌。牌面是“倒吊人”。】
 
 　　[[翻面查看]]&lt;&lt;/if&gt;&gt;
 
@@ -2622,7 +2628,7 @@ $(document).on("keyup", function (e) {
 
 　　达成BADEND：我负天下人
 
-　　[[返回标题页|4.31]]</tw-passagedata><tw-passagedata pid="143" name="挥向自己" tags="" position="250,3500" size="100,100">　　【在你用$weap终结自己生命的那一刻，你眼前的世界开始崩裂开来。】
+　　[[返回重选|4.31]]</tw-passagedata><tw-passagedata pid="143" name="挥向自己" tags="" position="250,3500" size="100,100">　　【在你用$weap终结自己生命的那一刻，你眼前的世界开始崩裂开来。】
 
 　　【没错，就像泡水过久的墙皮那样，这个世界开始一片片碎裂、脱落。】
 
@@ -3066,9 +3072,9 @@ $(document).on("keyup", function (e) {
 
 　　怎么样，要不要来？
 
-　　[[ed11(he1)]]
+　　[[同意入伙|ed11(he1)]]
 
-　　[[ed12(he2)]]
+　　[[拒绝入伙|ed12(he2)]]
 </tw-passagedata><tw-passagedata pid="174" name="ed11(he1)" tags="" position="250,4250" size="100,100">　　-好啊！我们一起冒险吧！
 
 　　【杜兰眼睛一亮，大笑着拍了拍你的肩。】
